@@ -11,7 +11,7 @@ A fullstack portfolio application built with ASP.NET Core Web API, React, TypeSc
 | Database   | PostgreSQL                          |
 | Styling    | Tailwind CSS                        |
 | DevOps     | Docker + GitHub Actions             |
-| Hosting    | Railway / Render / Azure App Services |
+| Hosting    | Railway / Render / Azure App Services | Not decided
 
 ## Features
 

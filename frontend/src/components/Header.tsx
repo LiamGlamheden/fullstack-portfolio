@@ -10,10 +10,24 @@ export default function Header() {
       backgroundColor: "#334155",
       color: "white"
     }}>
-        <div style={{ display: "flex", alignItems: "center"}}>
+        
+        <div style={{ 
+            display: "flex", 
+            alignItems: "center",
+            gap: "1rem",
+            cursor: "pointer"
+            }}>
             <img src="/Portfolio-icon.png" alt="Portfolio icon" style={{ height: "4em" }} />
-            <p>Liam Glamheden</p>
+            <p style={{ 
+                fontSize: "1.5rem", 
+                fontWeight: "600", 
+                margin: 0, 
+                color: "#f1f5f9"  
+            }}>
+                Liam Glamheden
+            </p>
         </div>
+
 
       <nav style={{ display: "flex", gap: "2rem" }}>
         <p style={{ cursor: "pointer" }}>Resume</p>

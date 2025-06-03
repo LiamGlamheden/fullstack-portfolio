@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI\\PortfolioAPI.csproj": {}
+    "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI.csproj": {}
   },
   "projects": {
-    "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI\\PortfolioAPI.csproj": {
+    "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI\\PortfolioAPI.csproj",
+        "projectUniqueName": "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI.csproj",
         "projectName": "PortfolioAPI",
-        "projectPath": "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI\\PortfolioAPI.csproj",
+        "projectPath": "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI.csproj",
         "packagesPath": "C:\\Users\\Liaml\\.nuget\\packages\\",
-        "outputPath": "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI\\obj\\",
+        "outputPath": "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Liaml\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,6 +46,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

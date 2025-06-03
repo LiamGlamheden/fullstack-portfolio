@@ -1,20 +1,18 @@
-import React from 'react';
-import HomePage from  './pages/HomePage';
+import HomePage from './pages/HomePage';
 import Header from './components/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 export default function App() {
   return (
-    <div className="App" >
-      <Router>
-        <Header/>
-          <Routes>
-            <Route path='/' element={<HomePage/>} />
-        
-
-          </Routes>
-      </Router>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path='/' element={<HomePage/>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-

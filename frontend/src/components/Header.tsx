@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
+    const navigate = useNavigate();
+
+    const handleAbout = () => {
+        navigate('/about');
+      };
   return (
+
     <header style={{
       display: "flex",
       alignItems: "center",
@@ -31,7 +38,7 @@ export default function Header() {
 
       <nav style={{ display: "flex", gap: "2rem" }}>
         <p style={{ cursor: "pointer" }}>Resume</p>
-        <p style={{ cursor: "pointer" }}>About</p>
+        <p onClick={handleAbout} style={{ cursor: "pointer" }}>About</p>
         <p style={{ cursor: "pointer" }}>Projects</p>
         <p style={{ cursor: "pointer" }}>Skills</p>
         <p style={{ cursor: "pointer" }}>Contact</p>

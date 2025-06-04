@@ -7,6 +7,10 @@ export default function Header() {
     const handleAbout = () => {
         navigate('/about');
       };
+
+      const handleContact = () => {
+        navigate('/contact');
+      };
   return (
 
     <header style={{
@@ -41,7 +45,7 @@ export default function Header() {
         <p onClick={handleAbout} style={{ cursor: "pointer" }}>About</p>
         <p style={{ cursor: "pointer" }}>Projects</p>
         <p style={{ cursor: "pointer" }}>Skills</p>
-        <p style={{ cursor: "pointer" }}>Contact</p>
+        <p onClick={handleContact} style={{ cursor: "pointer" }}>Contact</p>
       </nav>
     </header>
   );

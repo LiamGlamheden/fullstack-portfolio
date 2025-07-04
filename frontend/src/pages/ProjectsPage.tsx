@@ -15,8 +15,8 @@ const ProjectsPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('https://localhost:5001/projects') 
-      .then((res) => {
+    fetch('http://localhost:5236/api/projects')
+    .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch projects');
         return res.json();
       })

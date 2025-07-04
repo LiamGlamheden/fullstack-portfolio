@@ -7,7 +7,8 @@ type Project = {
   groupSize: number;
   techStack: string;
   date: string;
-  imageUrl?: string;  // Bild-url, optional
+  imageUrl?: string;
+  githubUrl: string;
 };
 
 const ProjectsPage: React.FC = () => {
@@ -49,11 +50,10 @@ const ProjectsPage: React.FC = () => {
           >
             {project.imageUrl && (
               <img
-  src={project.imageUrl}
-  alt={project.title}
-  style={{ width: 150, height: 150, objectFit: 'cover', borderRadius: 8 }}
-/>
-
+                src={project.imageUrl}
+                alt={project.title}
+                style={{ width: 150, height: 150, objectFit: 'cover', borderRadius: 8 }}
+              />
             )}
             <div>
               <h2>{project.title}</h2>
@@ -63,6 +63,12 @@ const ProjectsPage: React.FC = () => {
               </p>
               <p>
                 <strong>Tech Stack:</strong> {project.techStack}
+              </p>
+              <p>
+                <strong>GitHub:</strong>{' '}
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                  {project.githubUrl}
+                </a>
               </p>
               <p>
                 <strong>Date:</strong> {new Date(project.date).toLocaleDateString()}

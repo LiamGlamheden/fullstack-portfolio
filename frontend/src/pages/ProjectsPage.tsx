@@ -7,6 +7,7 @@ type Project = {
   groupSize: number;
   techStack: string;
   date: string;
+  imageUrl?: string;  // Bild-url, optional
 };
 
 const ProjectsPage: React.FC = () => {
@@ -16,7 +17,7 @@ const ProjectsPage: React.FC = () => {
 
   useEffect(() => {
     fetch('http://localhost:5236/api/projects')
-    .then((res) => {
+      .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch projects');
         return res.json();
       })
@@ -31,15 +32,45 @@ const ProjectsPage: React.FC = () => {
   return (
     <div>
       <h1>My Projects</h1>
-      {projects.map((project) => (
-        <div key={project.id} style={{ border: '1px solid #ccc', margin: '1rem 0', padding: '1rem' }}>
-          <h2>{project.title}</h2>
-          <p>{project.description}</p>
-          <p><strong>Group Size:</strong> {project.groupSize}</p>
-          <p><strong>Tech Stack:</strong> {project.techStack}</p>
-          <p><strong>Date:</strong> {new Date(project.date).toLocaleDateString()}</p>
-        </div>
-      ))}
+      {projects.map((project, index) => {
+        const isEven = index % 2 === 0;
+        return (
+          <div
+            key={project.id}
+            style={{
+              display: 'flex',
+              flexDirection: isEven ? 'row' : 'row-reverse',
+              border: '1px solid #ccc',
+              margin: '1rem 0',
+              padding: '1rem',
+              alignItems: 'center',
+              gap: '20px',
+            }}
+          >
+            {project.imageUrl && (
+              <img
+  src={project.imageUrl}
+  alt={project.title}
+  style={{ width: 150, height: 150, objectFit: 'cover', borderRadius: 8 }}
+/>
+
+            )}
+            <div>
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+              <p>
+                <strong>Group Size:</strong> {project.groupSize}
+              </p>
+              <p>
+                <strong>Tech Stack:</strong> {project.techStack}
+              </p>
+              <p>
+                <strong>Date:</strong> {new Date(project.date).toLocaleDateString()}
+              </p>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

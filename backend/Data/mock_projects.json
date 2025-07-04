@@ -5,7 +5,8 @@
         "Description": "Personal portfolio to showcase my projects.",
         "GroupSize": 1,
         "TechStack": "C#, ASP.NET Core, React",
-        "Date": "2025-06-20T00:00:00"
+        "Date": "2025-06-20T00:00:00",
+        "ImageUrl": "/Portfolio-icon.png"
     },
     {
         "Id": 2,

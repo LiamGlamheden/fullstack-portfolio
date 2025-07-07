@@ -16,8 +16,14 @@ const ProjectsPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Automatically switch between local and production URLs
+  const apiBaseUrl =
+    window.location.hostname === 'localhost'
+      ? 'http://localhost:5236'
+      : 'https://liamglamheden.com';
+
   useEffect(() => {
-    fetch('http://localhost:5236/api/projects')
+    fetch(`${apiBaseUrl}/api/projects`)
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch projects');
         return res.json();
@@ -25,7 +31,7 @@ const ProjectsPage: React.FC = () => {
       .then((data) => setProjects(data))
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
-  }, []);
+  }, [apiBaseUrl]);
 
   if (loading) return <p>Loading projects...</p>;
   if (error) return <p>Error: {error}</p>;

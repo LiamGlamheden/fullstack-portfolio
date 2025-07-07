@@ -15,6 +15,9 @@ export default function Header() {
       const handleResume = ()=> {
         navigate('/resume');
       }
+      const handleProjects = ()=> {
+        navigate('/projects');
+      }
   return (
 
     <header style={{
@@ -47,7 +50,7 @@ export default function Header() {
       <nav style={{ display: "flex", gap: "2rem" }}>
         <p onClick={handleResume} style={{ cursor: "pointer" }}>Resume</p>
         <p onClick={handleAbout} style={{ cursor: "pointer" }}>About</p>
-        <p style={{ cursor: "pointer" }}>Projects</p>
+        <p onClick={handleProjects} style={{ cursor: "pointer" }}>Projects</p>
         <p style={{ cursor: "pointer" }}>Skills</p>
         <p onClick={handleContact} style={{ cursor: "pointer" }}>Contact</p>
       </nav>

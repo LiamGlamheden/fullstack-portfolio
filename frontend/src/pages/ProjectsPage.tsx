@@ -23,8 +23,8 @@ const ProjectsPage: React.FC = () => {
       : 'https://liamglamheden.com';
 
   useEffect(() => {
-    fetch(`${apiBaseUrl}/api/projects`)
-      .then((res) => {
+    fetch(`${apiBaseUrl}/projects`)
+    .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch projects');
         return res.json();
       })

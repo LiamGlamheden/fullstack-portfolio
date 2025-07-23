@@ -1,5 +1,4 @@
 using System.Text.Json;
-using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +15,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-
 var app = builder.Build();
 
 app.UseCors("AllowAll");
@@ -31,11 +29,21 @@ if (app.Environment.IsDevelopment())
 // Endpoint to get projects
 app.MapGet("/api/projects", () =>
 {
-    var json = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Data", "mock_projects.json"));
-    var projects = JsonSerializer.Deserialize<List<Project>>(json);
-    return Results.Ok(projects);
-})
+    try
+    {
+        var filePath = Path.Combine(AppContext.BaseDirectory, "Data", "mock_projects.json");
+        if (!File.Exists(filePath))
+            return Results.Problem("File not found: " + filePath);
 
+        var json = File.ReadAllText(filePath);
+        var projects = JsonSerializer.Deserialize<List<Project>>(json);
+        return Results.Ok(projects);
+    }
+    catch (Exception ex)
+    {
+        return Results.Problem("Error reading projects: " + ex.Message);
+    }
+})
 .WithName("GetProjects")
 .WithOpenApi();
 

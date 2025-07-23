@@ -1,5 +1,3 @@
-C:\MyOwnProjects\fullstack-portfolio\backend\bin\Release\net8.0\appsettings.Development.json
-C:\MyOwnProjects\fullstack-portfolio\backend\bin\Release\net8.0\appsettings.json
 C:\MyOwnProjects\fullstack-portfolio\backend\bin\Release\net8.0\Data\mock_projects.json
 C:\MyOwnProjects\fullstack-portfolio\backend\bin\Release\net8.0\PortfolioAPI.exe
 C:\MyOwnProjects\fullstack-portfolio\backend\bin\Release\net8.0\PortfolioAPI.deps.json

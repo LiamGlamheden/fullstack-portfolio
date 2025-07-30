@@ -1,14 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-
 [ApiController]
 [Route("api/[controller]")]
 public class ProjectsController : ControllerBase
 {
     private readonly ProjectService _projectService;
 
-    public ProjectsController()
+    public ProjectsController(ProjectService projectService)
     {
-        _projectService = new ProjectService();
+        _projectService = projectService;
     }
 
     [HttpGet]

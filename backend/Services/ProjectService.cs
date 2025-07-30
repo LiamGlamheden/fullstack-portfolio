@@ -1,12 +1,17 @@
-using Newtonsoft.Json;
+
+using Microsoft.EntityFrameworkCore;
 
 public class ProjectService
 {
-    private readonly string _filePath = "Data/mock_projects.json";
+    private readonly AppDbContext _context;
+
+    public ProjectService(AppDbContext context)
+    {
+        _context = context;
+    }
 
     public List<Project> GetProjects()
     {
-        var json = File.ReadAllText(_filePath);
-        return JsonConvert.DeserializeObject<List<Project>>(json);
+        return _context.Projects.ToList();
     }
 }

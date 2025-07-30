@@ -1,8 +1,11 @@
-using System.Text.Json;
+
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add CORS and Swagger
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
@@ -18,6 +21,7 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 app.UseCors("AllowAll");
+
 app.UseHttpsRedirection();
 
 if (app.Environment.IsDevelopment())
@@ -26,22 +30,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Endpoint to get projects
-app.MapGet("/api/projects", () =>
+app.MapGet("/api/projects", async (AppDbContext db) =>
 {
     try
     {
-        var filePath = Path.Combine(AppContext.BaseDirectory, "Data", "mock_projects.json");
-        if (!File.Exists(filePath))
-            return Results.Problem("File not found: " + filePath);
-
-        var json = File.ReadAllText(filePath);
-        var projects = JsonSerializer.Deserialize<List<Project>>(json);
+        var projects = await db.Projects.ToListAsync();
         return Results.Ok(projects);
     }
     catch (Exception ex)
     {
-        return Results.Problem("Error reading projects: " + ex.Message);
+        return Results.Problem("Error fetching projects: " + ex.Message);
     }
 })
 .WithName("GetProjects")

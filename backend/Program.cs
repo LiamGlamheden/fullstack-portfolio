@@ -17,6 +17,12 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+// 1. Bind to the Render-provided port (or fallback to 5000 locally)
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+app.Urls.Clear();
+app.Urls.Add($"http://*:{port}");
+
+// 2. Enable CORS and HTTPS redirect
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 
@@ -26,7 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Endpoint to get projects
+// 3. Your mock-data endpoint
 app.MapGet("/api/projects", () =>
 {
     try

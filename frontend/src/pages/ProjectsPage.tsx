@@ -16,10 +16,10 @@ const ProjectsPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const apiBaseUrl =
-    window.location.hostname === 'localhost'
-      ? 'http://localhost:5236'
-      : 'https://liamglamheden.com';
+const apiBaseUrl =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:5236'
+    : 'https://fullstack-backend-g5xq.onrender.com';
 
   useEffect(() => {
     const fetchProjects = async () => {

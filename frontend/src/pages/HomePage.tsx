@@ -11,7 +11,7 @@ export default function HomePage() {
         flexWrap: 'wrap'
       }}>
         <img 
-          src="/profile.jpg"  
+          src="/PhotoOfMe2.jpg"  
           alt="Liam Glamheden" 
           style={{
             width: '300px',

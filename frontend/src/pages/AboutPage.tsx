@@ -3,7 +3,7 @@ export default function AboutPage() {
       <div style={{ maxWidth: "900px", margin: "2rem auto", padding: "1rem", fontFamily: "sans-serif" }}>
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
           <img
-            src="/your-photo.jpg"
+            src="/PhotoOfMe1.jpg"
             alt="Liam Glamheden"
             style={{ width: "200px", height: "200px", objectFit: "cover", borderRadius: "10px", marginBottom: "1rem" }}
           />

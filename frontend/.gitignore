@@ -1,23 +1,60 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
+# ───────────────────────────────
+# Dependencies
+node_modules/
+.pnp/
 .pnp.js
 
-# testing
-/coverage
+# ───────────────────────────────
+# Build output
+build/
+dist/
 
-# production
-/build
+# ───────────────────────────────
+# Testing
+coverage/
 
-# misc
-.DS_Store
+# ───────────────────────────────
+# Environment variables
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.*.local
 
+# ───────────────────────────────
+# Logs & Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+*.log
+*.tmp
+*.swp
+*.tgz
+
+# ───────────────────────────────
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# ───────────────────────────────
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# ───────────────────────────────
+# Cache
+.cache/
+.next/
+out/
+
+# ───────────────────────────────
+# Lock files (optional)
+package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

@@ -2,7 +2,6 @@ using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add CORS and Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
@@ -17,12 +16,10 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// 1. Bind to the Render-provided port (or fallback to 5000 locally)
 var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
 app.Urls.Clear();
 app.Urls.Add($"http://*:{port}");
 
-// 2. Enable CORS and HTTPS redirect
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 
@@ -32,7 +29,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// 3. Your mock-data endpoint
 app.MapGet("/api/projects", () =>
 {
     try

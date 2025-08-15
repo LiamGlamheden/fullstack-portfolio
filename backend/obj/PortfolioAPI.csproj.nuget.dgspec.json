@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI.csproj": {}
+    "F:\\VsCodeProjects\\Portfolio\\Skill_Portfolio\\fullstack-portfolio\\backend\\PortfolioAPI.csproj": {}
   },
   "projects": {
-    "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI.csproj": {
+    "F:\\VsCodeProjects\\Portfolio\\Skill_Portfolio\\fullstack-portfolio\\backend\\PortfolioAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI.csproj",
+        "projectUniqueName": "F:\\VsCodeProjects\\Portfolio\\Skill_Portfolio\\fullstack-portfolio\\backend\\PortfolioAPI.csproj",
         "projectName": "PortfolioAPI",
-        "projectPath": "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\PortfolioAPI.csproj",
-        "packagesPath": "C:\\Users\\Liaml\\.nuget\\packages\\",
-        "outputPath": "C:\\MyOwnProjects\\fullstack-portfolio\\backend\\obj\\",
+        "projectPath": "F:\\VsCodeProjects\\Portfolio\\Skill_Portfolio\\fullstack-portfolio\\backend\\PortfolioAPI.csproj",
+        "packagesPath": "C:\\Users\\liamc\\.nuget\\packages\\",
+        "outputPath": "F:\\VsCodeProjects\\Portfolio\\Skill_Portfolio\\fullstack-portfolio\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Liaml\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\liamc\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -57,7 +57,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[9.0.3, )"
             }
           },
           "imports": [
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

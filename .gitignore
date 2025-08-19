@@ -1,2 +1,8 @@
 backend/obj/Debug/net8.0/PortfolioAPI.AssemblyInfoInputs.cache
 backend/obj/Debug/net8.0/PortfolioAPI.AssemblyInfo.cs
+backend/bin/Debug/net8.0/Microsoft.OpenApi.dll
+backend/bin/Debug/net8.0/PortfolioAPI.dll
+backend/bin/Debug/net8.0/PortfolioAPI.exe
+backend/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+backend/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+backend/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll

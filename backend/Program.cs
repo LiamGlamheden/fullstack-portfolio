@@ -4,9 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
-        policy.WithOrigins("http://localhost:3000", "https://din-frontend-url.com") // frontend URL
+        policy.AllowAnyOrigin()
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
@@ -17,8 +17,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseCors("AllowFrontend");
-
+app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 
 if (app.Environment.IsDevelopment())
@@ -32,6 +31,7 @@ app.MapGet("/api/projects", () =>
     try
     {
         var filePath = Path.Combine(AppContext.BaseDirectory, "Data", "mock_projects.json");
+
         if (!File.Exists(filePath))
             return Results.Problem("File not found: " + filePath);
 

@@ -14,8 +14,13 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Submitted:', formData);
-    alert("Message sent!");
+
+    const subject = encodeURIComponent("Contact Form Message");
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+
+    window.location.href = `mailto:liam.l.glamheden@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -29,7 +34,7 @@ export default function ContactPage() {
         height: "fit-content"
       }}>
         <h2 style={{ marginBottom: "1rem" }}>Contact</h2>
-        <p><a href="liam.l.glamheden@gmail.com">liam.l.glamheden@gmail.com</a></p>
+        <p><a href="mailto:liam.l.glamheden@gmail.com">liam.l.glamheden@gmail.com</a></p>
         <p><a href="https://github.com/LiamGlamheden" target="_blank" rel="noopener noreferrer">GitHub</a></p>
         <p><a href="https://www.linkedin.com/in/liam-glamheden-b45463262/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
       </div>

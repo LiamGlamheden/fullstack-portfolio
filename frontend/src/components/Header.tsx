@@ -18,6 +18,10 @@ export default function Header() {
       const handleProjects = ()=> {
         navigate('/projects');
       }
+
+      const handleIcon = ()=> {
+        navigate('/');
+      }
   return (
 
     <header style={{
@@ -29,13 +33,13 @@ export default function Header() {
       color: "white"
     }}>
         
-        <div style={{ 
+        <div onClick={handleIcon} style={{ 
             display: "flex", 
             alignItems: "center",
             gap: "1rem",
             cursor: "pointer"
             }}>
-            <img src="/Portfolio-icon.png" alt="Portfolio icon" style={{ height: "4em" }} />
+            <img  src="/Portfolio-icon.png" alt="Portfolio icon" style={{ height: "4em" }} />
             <p style={{ 
                 fontSize: "1.5rem", 
                 fontWeight: "600", 
@@ -51,7 +55,7 @@ export default function Header() {
         <p onClick={handleResume} style={{ cursor: "pointer" }}>Resume</p>
         <p onClick={handleAbout} style={{ cursor: "pointer" }}>About</p>
         <p onClick={handleProjects} style={{ cursor: "pointer" }}>Projects</p>
-        <p style={{ cursor: "pointer" }}>Skills</p>
+        {/* <p style={{ cursor: "pointer" }}>Skills</p> */}
         <p onClick={handleContact} style={{ cursor: "pointer" }}>Contact</p>
       </nav>
     </header>

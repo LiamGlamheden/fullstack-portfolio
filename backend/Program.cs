@@ -2,25 +2,23 @@ using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.AllowAnyOrigin()
+        policy.WithOrigins("http://localhost:3000", "https://din-frontend-url.com") // frontend URL
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
 });
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
-app.Urls.Clear();
-app.Urls.Add($"http://*:{port}");
+app.UseCors("AllowFrontend");
 
-app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 
 if (app.Environment.IsDevelopment())

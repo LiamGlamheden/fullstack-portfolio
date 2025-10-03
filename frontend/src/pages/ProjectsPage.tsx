@@ -18,7 +18,7 @@ const ProjectsPage: React.FC = () => {
 
 const apiBaseUrl =
   window.location.hostname === 'localhost'
-    ? 'http://localhost:5000'
+    ? 'http://localhost:5236' //5000
     : 'https://fullstack-backend-g5xq.onrender.com';
 
   useEffect(() => {
@@ -84,6 +84,9 @@ const apiBaseUrl =
               <p>
                 <strong>Date:</strong> {new Date(project.date).toLocaleDateString()}
               </p>
+            </div>
+            <div>
+              <strong></strong>
             </div>
           </div>
         );

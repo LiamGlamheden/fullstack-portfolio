@@ -6,7 +6,10 @@ public class Project
     public int GroupSize { get; set; }
     public string TechStack { get; set; }
     public DateTime Date { get; set; }
-    
+
     public string githubUrl { get; set; }
     public string ImageUrl { get; set; }
+    
+    public string DemoUrl { get; set; }
+
 }

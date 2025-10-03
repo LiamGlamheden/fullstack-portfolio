@@ -9,6 +9,7 @@ type Project = {
   date: string;
   imageUrl?: string;
   githubUrl: string;
+  demoGifUrl?: string;
 };
 
 const ProjectsPage: React.FC = () => {

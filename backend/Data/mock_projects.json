@@ -8,7 +8,8 @@
         "TechStack": "C#, ASP.NET Core, React",
         "Date": "2025-06-20T00:00:00",
         "ImageUrl": "/Portfolio-icon.png",
-        "githubUrl": "https://github.com/LiamGlamheden/fullstack-portfolio"
+        "githubUrl": "https://github.com/LiamGlamheden/fullstack-portfolio",
+        "demoGifUrl": "DemoGif_PortFolio.gif"
     },
     {
         "Id": 4,

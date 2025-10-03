@@ -68,13 +68,7 @@ const apiBaseUrl =
               />
             )}
 
-              {project.demoGifUrl && (
-            <img
-              src={project.demoGifUrl}
-              alt={`${project.title} demo`}
-              style={{ width: 150, height: 150, objectFit: 'cover', borderRadius: 8 }}
-            />
-          )}
+            
             <div>
               <h2>{project.title}</h2>
               <p>{project.description}</p>
@@ -94,8 +88,20 @@ const apiBaseUrl =
                 <strong>Date:</strong> {new Date(project.date).toLocaleDateString()}
               </p>
             </div>
-   
-                          
+                {project.demoGifUrl && (
+            <div style={{ marginLeft: "auto" }}>
+              <img
+                src={project.demoGifUrl}
+                alt={`${project.title} demo`}
+                style={{
+                  width: 500,
+                  height: 250,
+                  objectFit: "cover",
+                  borderRadius: 8,
+                }}
+              />
+            </div>
+          )}                      
           </div>
         );
       })}

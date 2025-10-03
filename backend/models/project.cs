@@ -10,6 +10,6 @@ public class Project
     public string githubUrl { get; set; }
     public string ImageUrl { get; set; }
     
-    public string DemoUrl { get; set; }
+    public string demoGifUrl { get; set; }
 
 }

@@ -67,6 +67,14 @@ const apiBaseUrl =
                 style={{ width: 150, height: 150, objectFit: 'cover', borderRadius: 8 }}
               />
             )}
+
+              {project.demoGifUrl && (
+            <img
+              src={project.demoGifUrl}
+              alt={`${project.title} demo`}
+              style={{ width: 150, height: 150, objectFit: 'cover', borderRadius: 8 }}
+            />
+          )}
             <div>
               <h2>{project.title}</h2>
               <p>{project.description}</p>
@@ -86,9 +94,8 @@ const apiBaseUrl =
                 <strong>Date:</strong> {new Date(project.date).toLocaleDateString()}
               </p>
             </div>
-            <div>
-              <strong></strong>
-            </div>
+   
+                          
           </div>
         );
       })}

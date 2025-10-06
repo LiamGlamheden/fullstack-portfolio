@@ -20,7 +20,8 @@
         "TechStack": "React, Node.js, MySQL, Next.js, Javascript",
         "Date": "2025-05-15T00:00:00",
         "ImageUrl": "/skill-Portfolio-Icon.png",
-        "githubUrl": "https://github.com/LiamGlamheden/examensarbete-skill-portfolio"
+        "githubUrl": "https://github.com/LiamGlamheden/examensarbete-skill-portfolio",
+        "demoGifUrl": "DemoGif_Examierbete.gif"
     },
     {
         "Id": 3,

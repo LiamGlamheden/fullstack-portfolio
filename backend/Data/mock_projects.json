@@ -20,7 +20,8 @@
         "TechStack": "React, Node.js, MySQL, Next.js, Javascript",
         "Date": "2025-05-15T00:00:00",
         "ImageUrl": "/skill-Portfolio-Icon.png",
-        "githubUrl": "https://github.com/LiamGlamheden/examensarbete-skill-portfolio"
+        "githubUrl": "https://github.com/LiamGlamheden/examensarbete-skill-portfolio",
+        "demoGifUrl": "DemoGif_Examierbete.gif"
     },
     {
         "Id": 3,
@@ -31,7 +32,7 @@
         "TechStack": "Next.js, React, TypeScript, Prisma, MUI",
         "Date": "2025-03-01T00:00:00",
         "ImageUrl": "/eliterides-icon.png",
-        "githubUrl": "https://github.com/Alireza177/webshop-nextjs-frontcraft"
+        "githubUrl": "https://github.com/plugga-tech/webshop-nextjs-frontcraft"
     },
     {
         "Id": 2,

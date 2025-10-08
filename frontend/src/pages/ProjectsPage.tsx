@@ -9,6 +9,7 @@ type Project = {
   date: string;
   imageUrl?: string;
   githubUrl: string;
+  demoGifUrl?: string;
 };
 
 const ProjectsPage: React.FC = () => {
@@ -18,7 +19,7 @@ const ProjectsPage: React.FC = () => {
 
 const apiBaseUrl =
   window.location.hostname === 'localhost'
-    ? 'http://localhost:5000'
+    ? 'http://localhost:5236' //5000
     : 'https://fullstack-backend-g5xq.onrender.com';
 
   useEffect(() => {
@@ -66,6 +67,8 @@ const apiBaseUrl =
                 style={{ width: 150, height: 150, objectFit: 'cover', borderRadius: 8 }}
               />
             )}
+
+            
             <div>
               <h2>{project.title}</h2>
               <p>{project.description}</p>
@@ -85,6 +88,20 @@ const apiBaseUrl =
                 <strong>Date:</strong> {new Date(project.date).toLocaleDateString()}
               </p>
             </div>
+                {project.demoGifUrl && (
+            <div style={{ marginLeft: "auto" }}>
+              <img
+                src={project.demoGifUrl}
+                alt={`${project.title} demo`}
+                style={{
+                  width: 500,
+                  height: 250,
+                  objectFit: "cover",
+                  borderRadius: 8,
+                }}
+              />
+            </div>
+          )}                      
           </div>
         );
       })}

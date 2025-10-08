@@ -1,6 +1,6 @@
 [
     {
-        "Id": 1,
+        "Id": 5,
         "Title": "Portfolio Website",
         "Description": "Personal portfolio to showcase my projects.",
         "Description_SE": "Personlig portfolio för att visa mina projekt.",
@@ -8,10 +8,11 @@
         "TechStack": "C#, ASP.NET Core, React",
         "Date": "2025-06-20T00:00:00",
         "ImageUrl": "/Portfolio-icon.png",
-        "githubUrl": "https://github.com/LiamGlamheden/fullstack-portfolio"
+        "githubUrl": "https://github.com/LiamGlamheden/fullstack-portfolio",
+        "demoGifUrl": "/DemoGif_PortFolio.gif"
     },
     {
-        "Id": 2,
+        "Id": 4,
         "Title": "Examensarbete Skill Portfolio",
         "Description": "A platform for my graduation project where users can register, log in, create profiles, and share projects with tags. Built with React, Node.js, and MySQL.",
         "Description_SE": "En plattform för mitt examensarbete där användare kan registrera sig, logga in, skapa profiler och dela projekt med taggar. Byggd med React, Node.js och MySQL.",
@@ -19,21 +20,11 @@
         "TechStack": "React, Node.js, MySQL, Next.js, Javascript",
         "Date": "2025-05-15T00:00:00",
         "ImageUrl": "/skill-Portfolio-Icon.png",
-        "githubUrl": "https://github.com/LiamGlamheden/examensarbete-skill-portfolio"
+        "githubUrl": "https://github.com/LiamGlamheden/examensarbete-skill-portfolio",
+        "demoGifUrl": "DemoGif_Examierbete.gif"
     },
     {
         "Id": 3,
-        "Title": "App Development Household Application",
-        "Description": "A household management app where multiple members can be assigned chores with intervals of 1-31 days. The app shows statistics on who has done what and how often.",
-        "Description_SE": "En applikation för hushåll med fler än två medlemmar där varje medlem kan skrivas upp på sysslor som ska göras med intervall 1-31 dagar. Appen visar statistik över vem som gjort vad och hur ofta.",
-        "GroupSize": 6,
-        "TechStack": "React Native, Expo, TypeScript, Redux, Firebase",
-        "Date": "2024-11-01T00:00:00",
-        "ImageUrl": "/household-app-icon.png",
-        "githubUrl": "https://github.com/Davod0/App-Development-Household-Application"
-    },
-    {
-        "Id": 4,
         "Title": "EliteRides Webshop",
         "Description": "A webshop platform where users can browse and purchase multiple cars. Built using Next.js, TypeScript, and Prisma.",
         "Description_SE": "En webshop där användare kan bläddra bland och köpa flera bilar. Byggd med Next.js, TypeScript och Prisma.",
@@ -44,15 +35,25 @@
         "githubUrl": "https://github.com/Alireza177/webshop-nextjs-frontcraft"
     },
     {
-    "Id": 5,
-    "Title": "Todo App",
-    "Description": "A simple Todo app built with React Native and Expo. Users can create, view, and delete tasks with deadlines and receive notifications.",
-    "Description_SE": "En enkel Todo-app byggd med React Native och Expo. Användare kan skapa, visa och ta bort uppgifter med deadlines och få notifikationer.",
-    "GroupSize": 1,
-    "TechStack": "React Native, Expo, TypeScript, Notifications, ImagePicker, ViewShot",
-    "Date": "2024-09-01T00:00:00",
-    "ImageUrl": "/todo-app-icon.png",
-    "githubUrl": "https://github.com/LiamGlamheden/Inlamning_1_TodoApp_Final"
-}
-
+        "Id": 2,
+        "Title": "App Development Household Application",
+        "Description": "A household management app where multiple members can be assigned chores with intervals of 1-31 days. The app shows statistics on who has done what and how often.",
+        "Description_SE": "En applikation för hushåll med fler än två medlemmar där varje medlem kan skrivas upp på sysslor som ska göras med intervall 1-31 dagar. Appen visar statistik över vem som gjort vad och hur ofta.",
+        "GroupSize": 6,
+        "TechStack": "React Native, Expo, TypeScript, Redux, Firebase",
+        "Date": "2024-11-01T00:00:00",
+        "ImageUrl": "/household-app-icon.png",
+        "githubUrl": "https://github.com/Davod0/App-Development-Household-Application"
+    },
+    {
+        "Id": 1,
+        "Title": "Todo App",
+        "Description": "A simple Todo app built with React Native and Expo. Users can create, view, and delete tasks with deadlines and receive notifications.",
+        "Description_SE": "En enkel Todo-app byggd med React Native och Expo. Användare kan skapa, visa och ta bort uppgifter med deadlines och få notifikationer.",
+        "GroupSize": 1,
+        "TechStack": "React Native, Expo, TypeScript, Notifications, ImagePicker, ViewShot",
+        "Date": "2024-09-01T00:00:00",
+        "ImageUrl": "/todo-app-icon.png",
+        "githubUrl": "https://github.com/LiamGlamheden/Inlamning_1_TodoApp_Final"
+    }
 ]

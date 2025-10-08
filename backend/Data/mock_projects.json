@@ -32,7 +32,8 @@
         "TechStack": "Next.js, React, TypeScript, Prisma, MUI",
         "Date": "2025-03-01T00:00:00",
         "ImageUrl": "/eliterides-icon.png",
-        "githubUrl": "https://github.com/plugga-tech/webshop-nextjs-frontcraft"
+        "githubUrl": "https://github.com/plugga-tech/webshop-nextjs-frontcraft",
+        "demoGifUrl": "DemoGif_WebShop.gif"
     },
     {
         "Id": 2,
